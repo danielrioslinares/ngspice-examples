@@ -4,7 +4,9 @@ ngSPICE examples with gnuplot figures and multiple analysis such as:
 - DC sweep analysis : label "dc"
 - Pole-Zero analysis : label "pz"
 - Transient analysis : label "tr"
+
 In the entire project, Makefile is used for shortcut to the commands, and the typical make commands are:
+
 - sch2net : convert the gschem schematic to netlist (only netlist, actually without running)
 - net2cir_<analysis> : circuit generation with netlist and analysis.
 - cir2dat_<analysis> : data output generation from the circuit.
