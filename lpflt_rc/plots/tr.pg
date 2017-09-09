@@ -1,0 +1,18 @@
+
+set terminal epslatex
+set output "plt.tex"
+
+# Gridlines
+set grid lt rgb "gray"
+
+# No legend
+set nokey
+
+##############
+# Start plot #
+##############
+set title "RC step response"
+set xlabel "time (\\SI{}{\\milli\\second})"
+set ylabel "voltage (\\SI{}{\\volt})"
+
+plot "./data/tr.data" using ($1*1000):4 with lines lt rgb "blue"

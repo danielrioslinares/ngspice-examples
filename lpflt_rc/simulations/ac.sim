@@ -1,0 +1,5 @@
+.control
+ac dec 10 10 100k
+run
+wrdata ./data/ac db(abs(v(No))) phase(v(No))
+.endc

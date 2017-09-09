@@ -1,0 +1,5 @@
+.control
+tran 0.01ms 5ms
+run
+wrdata ./data/tr v(Ni) v(No)
+.endc

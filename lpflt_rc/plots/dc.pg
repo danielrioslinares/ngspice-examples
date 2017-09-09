@@ -1,0 +1,18 @@
+
+set terminal epslatex
+set output "plt.tex"
+
+# Gridlines
+set grid lt rgb "gray"
+
+# No legend
+set nokey
+
+##############
+# Start plot #
+##############
+set title "RC input sweep"
+set xlabel "input voltage $v_I$ (\\SI{}{\\volt})"
+set ylabel "output voltage $v_O$ (\\SI{}{\\volt})"
+
+plot "./data/dc.data" using 1:2 with lines lt rgb "blue"

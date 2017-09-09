@@ -1,0 +1,43 @@
+
+set terminal epslatex
+set output "plt.tex"
+
+# Gridlines
+set grid lt rgb "gray"
+
+# Set x axis to logarithmic scale
+set logscale x 10
+set xrange [10:10000]
+set format x "$10^%T$"
+
+# No legend
+set nokey
+set label 11 center at graph 0.5
+
+
+
+##############
+# Start plot #
+##############
+set multiplot layout 2,1 title "first order low-pass filter - Bode plot"
+
+##______[ Magnitude plot ]______##
+# X axis tick mark per decade (multiple of 10)
+set xtics 10
+# Y axis tick mark (multiple of 10 dB)
+set ytics 10
+# Axis labels
+set ylabel "gain (\\SI{}{\\decibel})"
+# Plot
+plot "./data/ac.data" using 1:2 with lines lt rgb "blue"
+
+##______[ Phase plot ]______##
+set title "frequency $f$ (\\SI{}{\\hertz})" offset 0,-12
+# X axis tick mark per decade (multiple of 10)
+set xtics 10
+# Y axis tick mark (multiple of 30º)
+set ytics 15
+# Axis labels
+set ylabel "phase ($\\SI{}{\\degree}$)"
+# Plot
+plot "./data/ac.data" using 1:($4*360/2/pi) with lines lt rgb "blue"

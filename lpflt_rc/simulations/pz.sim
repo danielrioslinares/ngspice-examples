@@ -1,0 +1,5 @@
+.control
+pz Ni 0 No 0 VOL POL
+run
+wrdata ./data/pz all
+.endc

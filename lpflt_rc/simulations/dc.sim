@@ -1,0 +1,5 @@
+.control
+dc Vi 1V 10V 0.1V
+run
+wrdata ./data/dc v(No)
+.endc
